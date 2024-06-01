@@ -11,11 +11,11 @@ from streamlit_option_menu import option_menu
 import os
 
 # Load các mô hình và dữ liệu test
-cluster_model = joblib.load('D:/Dương Diệu Linh_20070944/DSS/best_kmeans_model.pkl')
-logistic_regression_model = pickle.load(open("D:/Dương Diệu Linh_20070944/DSS/logistic_regression_model.pkl", "rb"))
-random_forest_model = pickle.load(open("D:/Dương Diệu Linh_20070944/DSS/random_forest_model.pkl", "rb"))
-nn_model = load_model("D:/Dương Diệu Linh_20070944/DSS/neural_network_model.keras")
-test_data = pd.read_csv("D:/Dương Diệu Linh_20070944/DSS/test.csv")
+cluster_model = joblib.load('best_kmeans_model.pkl')
+logistic_regression_model = pickle.load(open("logistic_regression_model.pkl", "rb"))
+random_forest_model = pickle.load(open("random_forest_model.pkl", "rb"))
+nn_model = load_model("neural_network_model.keras")
+test_data = pd.read_csv("test.csv")
 
 # Initialize session state for login
 if 'logged_in' not in st.session_state:
@@ -101,10 +101,10 @@ def main():
 
         # Column for image display
         with col2:
-            image = Image.open("D:/Dương Diệu Linh_20070944/DSS/circle k 3.jpg")
+            image = Image.open("circle k 3.jpg")
             st.image(image, use_column_width=True)
     else:
-        image = Image.open("D:/Dương Diệu Linh_20070944/DSS/circle K 2.jpg")
+        image = Image.open("circle K 2.jpg")
         st.image(image, use_column_width=True)
         st.title('Circle K Customer Behavior Cluster and Prediction WEBAPP')
 
