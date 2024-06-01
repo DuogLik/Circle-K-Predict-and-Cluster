@@ -4,3 +4,4 @@ matplotlib
 scikit-learn
 tensorflow>=2.7.0,<3.0.0   # Adjust TensorFlow version range as needed
 joblib
+streamlit
